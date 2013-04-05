@@ -1,0 +1,18 @@
+<table class="table table-striped">  
+ <thead>  
+   <tr>  
+     <th>User</th>  
+     <th>Tweet</th>  
+     <th>Time Created</th>   
+   </tr>  
+ </thead>  
+ <tbody>
+	<% Twitter.search(@search, :count => 20, :result_type => "recent").results.map do |tweet| %>
+		<tr>
+			<td><%= "#{tweet.from_user}"%></td>
+			<td><%= "#{tweet.text}"%></td>
+			<td><%= "#{tweet.created_at}"%></td>
+		</tr>
+	<% end %>   
+ </tbody>  
+</table>
