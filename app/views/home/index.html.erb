@@ -1,5 +1,7 @@
 <h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<p><%= Twitter.search("to:justinbieber marry me", :count => 3, :result_type => "recent").results.map do |status|
+  	"#{status.from_user}: #{status.text}"
+	end %></p>
 <% if user_signed_in? %>
   <li>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        

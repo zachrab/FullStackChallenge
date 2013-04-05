@@ -12,6 +12,11 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+#Twitter API
+gem 'twitter'
+gem 'omniauth'
+gem 'omniauth-twitter'
+
 #Authentication
 gem 'devise'
 
