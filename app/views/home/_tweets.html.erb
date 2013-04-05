@@ -9,7 +9,7 @@
  <tbody>
 	<% Twitter.search(@search, :count => 20, :result_type => "recent").results.map do |tweet| %>
 		<tr>
-			<td><%= "#{tweet.from_user}"%></td>
+			<td><%= link_to "#{tweet.from_user}", user_path(:user => "#{tweet.from_user}")%></td>
 			<td><%= "#{tweet.text}"%></td>
 			<td><%= "#{tweet.created_at}"%></td>
 		</tr>

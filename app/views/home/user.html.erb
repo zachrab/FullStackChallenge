@@ -1,0 +1,20 @@
+<div class="text-center">
+	<%= link_to "Go back to overview page", root_url%>
+	<h2> User: <%= "#{@user}"%></h2>
+	<table class="table table-striped">  
+	 <thead>  
+	   <tr>  
+	     <th>Tweet</th>  
+	     <th>Time Created</th>   
+	   </tr>  
+	 </thead>  
+	 <tbody>
+		<% Twitter.user_timeline(@user).each do |tweet| %>
+			<tr>
+				<td><%= "#{tweet.text}"%></td>
+				<td><%= "#{tweet.created_at}"%></td>
+			</tr>
+		<% end %>   
+	 </tbody>  
+	</table>
+</div>

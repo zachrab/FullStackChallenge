@@ -7,4 +7,8 @@ class HomeController < ApplicationController
   def search
     @search = params[:search].blank? ? "America" : params[:search]
   end
+  
+  def user
+    @user = params[:user]
+  end
 end

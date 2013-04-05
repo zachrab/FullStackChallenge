@@ -55,6 +55,7 @@ FullStackChallenge::Application.routes.draw do
   # root :to => 'welcome#index'
   root :to => 'home#index'
   match 'search' => 'home#search'
+  match 'user' => 'home#user'
 
   # See how all your routes lay out with "rake routes"
 
